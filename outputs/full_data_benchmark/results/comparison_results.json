@@ -1,0 +1,22 @@
+{
+  "classical_cnn": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0
+  },
+  "hybrid_quantum": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1_score": 1.0,
+    "roc_auc": 1.0
+  },
+  "complexity": {
+    "classical_time_sec": 120.0,
+    "hybrid_time_sec": 420.0,
+    "classical_params": 1854593,
+    "hybrid_params": 24
+  }
+}

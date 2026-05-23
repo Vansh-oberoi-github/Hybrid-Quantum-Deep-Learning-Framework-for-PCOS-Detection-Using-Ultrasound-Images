@@ -1,0 +1,17 @@
+# Datasets
+Dtataset/
+data_curated/
+
+# Python cache
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# IDE & AI Configs
+.vscode/
+.gemini/
+.idea/
+
+# Large binaries (optional, keeping models for now since they are small enough)
+# outputs/models/*.keras
