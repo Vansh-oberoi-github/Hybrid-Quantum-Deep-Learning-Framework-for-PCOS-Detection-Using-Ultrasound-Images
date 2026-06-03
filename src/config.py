@@ -33,7 +33,7 @@ for d in [CURATED_DATA_DIR, MODEL_DIR, PLOT_DIR, RESULTS_DIR]:
 # 2. DATA SETTINGS
 # ─────────────────────────────────────────────
 # Low-Data Regime (Starves models of training data to prove Quantum Advantage)
-LOW_DATA_MODE = True
+LOW_DATA_MODE = False
 LOW_DATA_TRAIN_SAMPLES = 20  # Number of training images PER CLASS (40 total)
 
 IMG_SIZE           = 224          # Input image size (224x224 for MobileNetV2)

@@ -42,6 +42,8 @@ Traditional Gradient-weighted Class Activation Mapping (Grad-CAM) can fail in bi
 ### 4.2 Score-CAM (Advanced Visualization)
 To further eliminate gradient noise, we introduce Score-CAM, a purely gradient-free approach. By upsampling the CNN feature maps, normalizing them, and using them to mask the original image, we evaluate the forward-pass confidence of the network on each masked input. Score-CAM consistently provides cleaner, highly localized heatmaps, correctly highlighting ovarian follicles and cystic formations, ensuring the model is making decisions based on true physiological morphology.
 
+![Explainability - Grad-CAM vs Score-CAM](./plots/explainability_grid.png)
+
 ## 5. Computational Complexity & Parameter Efficiency
 
 While both the Classical CNN and Hybrid Quantum models achieve identical perfect classification accuracy on the clean Dataset 2 test set, a massive divergence emerges when analyzing their underlying computational architecture.
@@ -56,6 +58,20 @@ This represents an extraordinary 99.998% reduction in trainable parameters at th
 Despite having exponentially fewer parameters, the quantum model incurs significant computational overhead during training. Because the VQC is simulated classically (via state-vector simulation on CPU), the Hybrid Quantum model took approximately **7.0 minutes** to train, compared to the Classical CNN's **2.0 minutes**. 
 
 This perfectly illustrates the current paradigm of QML in the NISQ era: extreme parameter efficiency at the cost of high simulated training overhead. This highlights the urgent necessity for native, fault-tolerant quantum hardware to realize true quantum advantage in both training speed and parameter efficiency simultaneously.
+
+![Complexity Comparison](./plots/complexity_comparison.png)
+
+### 5.3 Training History
+![Classical CNN - Accuracy and Loss](./plots/training_history_classical_cnn.png)
+![Hybrid Quantum - Accuracy and Loss](./plots/training_history_hybrid_quantum.png)
+
+### 5.4 Performance Metrics Comparison
+![ROC Curve Comparison](./plots/roc_curves_comparison.png)
+![Performance Comparison](./plots/metrics_comparison.png)
+
+### 5.5 Confusion Matrices
+![Classical CNN Confusion Matrix](./plots/confusion_matrix_classical_cnn.png)
+![Hybrid Quantum Confusion Matrix](./plots/confusion_matrix_hybrid_quantum.png)
 
 ## 6. The Low-Data Regime: Empirical Quantum Advantage
 

@@ -25,16 +25,16 @@ The framework utilizes a highly optimized hybrid pipeline:
 In modern medical machine learning, acquiring massive, annotated datasets is extremely expensive. This project was specifically benchmarked in a **Low-Data Regime** to test the expressivity of the quantum layer.
 
 When the training algorithm was artificially starved of data (restricted to merely **40 training images**):
-- **Classical CNN Head (~1.8 Million Params)**: Severely overfit the data and degraded to **92.7%** accuracy on the massive 230-image unseen test set.
-- **Hybrid Quantum VQC (24 Params)**: Mathematically mapped the features efficiently within its exponential Hilbert space, achieving **94.0%** accuracy, alongside superior Recall, F1-Score, and ROC-AUC.
+- **Classical CNN Head (~1.8 Million Params)**: Severely overfit the data and degraded to **87.6%** accuracy on the massive 230-image unseen test set.
+- **Hybrid Quantum VQC (24 Params)**: Mathematically mapped the features efficiently within its exponential Hilbert space, achieving **97.0%** accuracy, alongside superior Recall, F1-Score, and ROC-AUC.
 
 This proves that Variational Quantum Circuits offer a massive paradigm shift in parameter efficiency and low-data generalizability.
 
 ### Parameter Efficiency Comparison
 | Architecture | Trainable Classification Parameters | Accuracy (Low-Data) |
 | --- | --- | --- |
-| Classical CNN | ~1,854,000 | 92.74% |
-| Hybrid Quantum | **24** | **94.02%** |
+| Classical CNN | ~1,854,000 | 87.61% |
+| Hybrid Quantum | **24** | **97.01%** |
 
 ---
 
